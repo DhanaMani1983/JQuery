@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<Title>Simple Interest</Title>
+	<meta name="Author" content="Dhanasekaran Mani" />
+	<meta name="Keywords" content="HTML, CSS, Javascript, JQuery" />
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="SimpleInterest.js"></script>
+</head>
+<body>
+	<h1>Simple Interest</h1>
+	<hr/>
+	<h2>Client side jquery Demo</h2>
+	<table>
+		<caption style="margin-bottom:10px;"><b>Simple Interest Calculator</b></caption>
+		<tr>
+			<td><label for="Name">Enter Principal Amount:</label></td>
+			<td><input id="txtPrincipal" type="text" /></td>
+		</tr>
+		<tr>
+			<td><label for="Name">Enter Rate of Interest %:</label></td>
+			<td><input id="txtInterestPercentage" type="text" /></td>
+		</tr>
+		<tr>
+			<td><label for="Name">No. of Years:</label></td>
+			<td><input id="txtNoOfYears" type="text" /></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button id="btnCalculate">Calculate</button></td>
+		</tr>
+		<tr id="trInterest" style="display:none">
+			<td>Interest value:</td>
+			<td id="tdInterest"></td>
+		</tr>
+		
+	</table>
+	<p id="Result">
+	</p>
+</body>
+</html>

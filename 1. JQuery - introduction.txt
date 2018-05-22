@@ -1,0 +1,89 @@
+#############################################
+JQuery Introduction
+#############################################
+
+JQuery:
+
+Javascript is powerful, but coding is very tedious. To make scripting easier and less tedious JQuery was introduced
+
+Browser Compatibility:
+
+Javascript coding differed for each browser, to have common functions and scipts across all browser.
+
+Ease of work:
+
+Javascript was able to handle only one element at a time where Jquery can select group of elements apply function or styles
+
+Utilities:
+
+To perform certain functionalities utilities are available
+
+Plug-ins:
+
+For example: to provide auto-complete functionality for textbox plug-ins are available
+
+Working with Ajax is important in this era
+
+
+Jquery Integration:
+
+To use Jquery in your website, you need to download Jquery
+
+jQuery.com/download then download the compressed production Jquery
+
+Linking to web page:
+
+Include the jquery min file as 
+
+<script src="jquery-3.3.1.min.js"></script>
+<script src="jquery1.js"></script>
+
+$(document).ready(
+	function(){
+		alert("Message from JQuery!!");
+	}	
+);
+
+$ marks start of Jquery
+value within () is selector, above document is selector
+ready means document completed loading, similar to window.onload
+
+DOM and DocumentLoad:
+
+Javascript is used for HTML manipulation, but how text can be manipulated. Browser sees HTML document as DOM, where each tag is considered as object where each attribute is a property
+Becuase each element is a object we can use it properties and methods easily. 
+<html><head></head><body></body></html> where html has 2 object, head will have own set of objects and body will have own set of objects.
+
+On Document Load:
+
+If we want to modify DOM, we need to wait for browser to download the document from server and convert it to DOM. If we manpulate before dom we might get error. 
+
+So it best wait till document gets loaded.$(document).ready checks/waits till document gets loaded. shortcut for it is $(function(){};);
+
+JQuery Operations:
+
+In JQuery one can do multiple operations but most of the time we will be doing the following, refer example for more detail understanding
+
+Selection
+
+To select an element use CSS notation like #Elementname
+
+Getting/Setting Content
+
+To get value from an element use val() function and use html() function to set value for the element 
+
+Getting/Setting Style
+
+Simple Interest:
+
+Designing Form
+Assigning Ids
+Hooking up click event of Button
+Displaying output
+
+Please refer training demos
+
+
+
+
+
