@@ -83,6 +83,16 @@ Displaying output
 
 Please refer training demos
 
+Temperature Conversion Chart:
+
+Input Controls
+
+Output Para
+
+Contruct table and assign to para 
+
+Please refer training demos
+
 
 
 
