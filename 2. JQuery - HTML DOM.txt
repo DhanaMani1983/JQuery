@@ -1,0 +1,118 @@
+#############################################
+JQuery HTML DOM
+#############################################
+
+DOM Revisited
+
+         Document
+         Root Element
+        Head      Body
+    Title  Meta  a      h1      p
+    Text         href   heder   Text
+    MyTitle
+
+In DOM each element is an object and each element attribute is also an object. 
+
+HTML has two objects Head and Body. Head can have title object and title object has text object etc.
+
+DOM document:
+
+document is the web page, is the owner of all elements, to manipulate a web page, object to use is document
+
+Document Methods:
+
+document.getElementById() - find an element by element id
+document.getElementsByTagName() - find elements by tag name eg p(paragraph), h1 Returns a collection based on tag name, where we can loop through collection
+document.getElementsByClassName() - find elements by class name
+
+Changing Elements
+
+element.innerHTML - change the inner HTML of an element
+element.attribute - change the attribute of an HTML element eg: width:100
+element.setAttribute(attribute,value) - change the attribute of an HTML element
+element.stype.property - change the style of an HTML element. one can change style using style object, document.getElementById().style.color=Red;
+
+Adding or Deleting Elements:
+
+we can dynamically add, remove or replace elements
+
+document.creatElement() - Create an HTML element
+document.removeChile() -  Remove an HTML element
+document.appendChild() - Add an HTML element
+document.replaceChild() - Replace an HTML element
+document.write() - Write into the HTML output stream
+
+Adding Event  Handlers:
+
+Each object in DOM have many events, in google search javascript document events to find list of events
+
+document,getElementById().onclick=
+
+
+Finding HTML objects:
+document.anchors - Returns all <a> with a value in name attribute
+document.applets - returns all <applet> elements
+document.body - returns all <body> element
+document.cookie - returns the document's cookie
+document.domain - returns the domain name of the document server
+document,forms - returns all <form> elements
+document.images - returns all <image> elements
+document.links  - returns all <area> and <a> elements value in href
+document.referrer - return the URI of the referrer
+document.title - returns the <title> element
+documentURL - Returns the complete URL of the document.
+
+Event Listener:
+
+Another way of adding event listener is using element.addEventListener(event,function,usecapture)
+
+Event = Click, blur, focus etc. on keyword should be ignored
+function = name of the function, multiple functions can be specified
+usecaptue = is always set to false, where we ensure the events are executed from current element to parent.
+
+element.removeEventListener(event,function); - Renove event listener.
+
+DOM Navigation:
+
+<html><head></head><body></body></html>
+
+Html is the parent node for both head and body object. where head is the first child and body is the last child
+For head body is next sibiling and for body head is previous sibiling
+
+parentNode, childNodes[nodenumber], firstChild, lastChild, nextSibiling, previousSibiling
+
+Each attribute is node. <p id="p1">This is a paragraph.</p> where <p> is parent node and text This is a paragraph is child node
+, .nodeName Name of the element, ,nodeValue value of the element, .nodeType whether its tag or attribute.
+
+Create new HTML element:
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+<script>
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+var element = document.getElementById("div1");
+element.appendChild(para);
+</script>
+
+Remove HTML element:
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+<script>
+var parent = document.getElementById("div1");
+var child = document.getElementById("p1");
+
+parent.removeChild(child);
+</script>
+
+
+
+
+
