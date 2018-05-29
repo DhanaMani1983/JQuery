@@ -1,0 +1,40 @@
+Math Object:
+
+To perform mathematical operations in Javascript one can use Math object. 
+
+Math object has functions abs(x), random(), pow(x,y), ceil(x), sqrt(x), round(x), cos(x) etc
+
+Number object:
+
+To perform certain operations with number operations we can use functions toExponential(x), .toFixed(x), toString()
+,toPrecision() etc.
+
+Date object:
+
+We can use Date object for creating or assigning dates
+
+var d = new Date() - Assign new date to variable d
+var d = new Date(milliseconds) - milliseconds start from 01/01/1970, so if you specify a whole number it will assign the corresponding date
+var d = new Date(datestring) - converts datestring to date
+var d = new Date(year,month,date,hours,minutes,seconds,milliseconds)
+
+use date method to manipulate dates
+
+getDate(), getDay(), getFullYear(), getHours, 
+setDate(), setFullYear(), SetHours()
+
+UTC - coordinated universal time, it starts with GMT as 0 where India is 5.30 hours away
+
+String object:
+
+We can create sting object using options below
+
+var txt = new String("");
+
+var txt ="";
+
+To find length of string object we can use length function
+
+txt.length
+
+charAt(), indexOf(), charCodeAt() - Unicode is used to represent a unique number for all languages in the world
