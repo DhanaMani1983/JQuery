@@ -1,0 +1,68 @@
+################################################
+Regular Expressions
+################################################
+
+What is RegEx:
+
+Advanced level of searching, if you check pattern in a text. It is used to search for text based on a pattern
+
+Use regexpal.com for testing regex pattern
+
+write pattern within // example: /d{10}/g
+
+Example:
+
+say if you want to search for 10 digit phone numbers which start with 900500 and finish with 1, use the regex pattern 900500\d{3}1 where \d{3} means 3 digits
+
+RegExp Syntax:
+
+var patt = new RegExp(pattern,modifiers)
+var patt = /pattern/modifiers
+
+Test() and exec():
+
+Test() is used to check whether a pattern exists, it return true or false value
+Exec() is used to get string which matches the pattern, it gets the first word and moves to the next word. it is mostly used for looping 
+Match() is used to get the pattern matches as an array
+
+Modifiers:
+
+In regex first comes the pattern and next comes modifier
+
+i - perform case-insensitive matching
+g - Perform a global match(find all matches rather than stopping after the first match)
+m - perform multiline matching, In a document to consider each line start use m
+
+Brackets:
+
+[abc] Find any characters between the brackets
+]^abc] find any characters not between the brackets
+[0-9] find any digit between the brackets
+[^0-9] find any digit not between the brackets
+(x|y) find any alternatives specified, to provide multiple conditions
+
+Pattern followed by * - means zero or more patterns.
+
+MetaCharacter Description:
+
+. Find a single character, except newline or line terminator
+\w Find a word character
+\W find a non-word character
+\d find a digit
+\D find a non-digit character
+\s Find a white space character
+\S find a non whitespace character
+
+
+Quantifier: after patterns we can specify quantifiers 
+
+n+ Matches any string that contains at least one n
+n* Matches any string that contains zero or more occurences of n
+n? Matches any string that contains zero or one occurences of n
+n{X} - Matches any string that contans a sequence of X n's
+n{X,Y} - matches any string that contains a sequence of X to Y n's, we specify a range
+n{X,} - matches any string that contains a sequence of atleast X n's
+n$ - matches any string with n at the end of it
+^n Matches any string with n at the begining of it
+?=n Matches any string that is followed by a specific string n
+?!n Matches any string that is not followed by a specific string n

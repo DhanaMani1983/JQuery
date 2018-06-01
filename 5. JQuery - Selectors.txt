@@ -1,0 +1,49 @@
+################################################
+JQuery Selectors
+################################################
+
+Simple Selectors:
+
+Main purpose of JQuery is selecting an element and then managing the element. Jquery tag selection is similar to CSS tag selection
+
+
+* - $("*") - Selects all elements
+#id - $("#btnTest") - selects the element with the id btnTest
+.class = $(".menu") - selects all the elements with class name .menu
+.class, .class - $(".intro, .demo") - all the elements with class "intro" or "demo"
+Tagname - $("p") - selects all paragraph elements
+comma seperated List - $("#btnTest,p") - selects all the paragraphs and the element with id btnTest
+parent>child - $("div>p") - All <p> elements that are a direct child of a <div> element
+parent descendant - $("div p") - All <p> elements that are descendants of a <div> element
+
+Pseudo Selectors:
+
+We use : for Pseudo selectors
+
+:first - $("p:first") - First paragraph <p> element
+:last - $("p:last") - Last paragraph <p> element
+:even - $("tr:even") - All even table row elements
+:odd - $("tr:odd") - All odd table row elements
+:first-child $("p:first-child") - All <p> elements that are the first child of the their parent
+:last-child $("p:last-child") - All <p> elements that are the last child of the their parent
+:nth-child(n) - $("nth-child(2)") - All <p> elements that are the 2nd child of their parent
+:focus - $(":focus") - element which currently has focus
+:contains(text) - $(":contains("Hello")") - All elements which contains the text "Hello"
+:hidden - $("p:hidden") All hidden <p> elements
+:visible - $("table:visible") All visible tables
+
+
+Attribute Selectors:
+
+if we specify an attribute within square brackets [], then elements which contain the attribute will be selected
+
+
+[attribute] - $("[href]") - All elements with a href attribute
+
+Form Elements:
+
+To select form elements we can use selectors
+
+:input - $(":input") - Select all input elements 
+
+
