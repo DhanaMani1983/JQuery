@@ -1,0 +1,123 @@
+################################################
+JQuery Managing Wrapped Element Set
+################################################
+
+Wrapped element set:
+
+
+When you make selects using Jquery it returns a wrapped element set, there are certain methods which you can apply to wrapped element set
+for eg: size which gives number of elements in wrapped set.
+$("#somediv").html("there are " + $("a").size() + "links on this page");
+
+If you want to extract particular element like a javascript element from the wrapped set you can use index
+
+$("img[alt]")[0], $("a").get[2], $("a").get() - gets all the elements as plain array
+
+Find the index of the particular item
+
+var n = $("img").index($(img#gindme")[0])
+
+Adding more elements to wrapped set
+
+$("img[alt]").add("img[title]") - Add() additional images
+
+Honing the contents of the wrapped set
+
+$("img[Title]").not("[title=puppy]") - removes all images with the title that contains the word puppy
+
+filtering only required elements
+
+$("td").filter(function(){return this.innerHTML.match(/^\d+$/)}) - this statement filters only the td elements that contains only numeric value
+
+Find in the wrapped set
+
+wrappedSet.find('p a') - find all the anchors in the paragraph of the existing wrapped set
+
+($('p a' wrappedSet) - similar to above
+
+Elements containing text 
+
+$('p').contains('Lorem ipsum') find the paragraph with the given string
+
+var hasImage = $("").is('img'); - the has image will be true if atleast one image is found in the page. if no image is found then returns false.
+
+Manipulating Element properties:
+
+The reason for selecting a wrapped set is to do certain manipulations, for example change contents/style/behaviour etc.
+
+.each() - iterator
+
+$("td").each(function(n){$(this).text('cell: ') + n }); - sets each cell as Cell:cellnumber, Here n will be the index position
+
+Obtaining value of a single object:
+
+var altValue = $("#myImage")[0].alt - gets the alternate text value of the image. $("#myImage")[0] will convert as javascript object
+
+We have corresponding function in javascript as $("#myImage").attr("alt") - Gets the alt attribute value
+
+Setting Attribute value
+
+$("#myImage").attr("alt","This is new alternate text!")
+
+setting multiple attribute values of all the elements
+
+$("input").attr({value:'',title:'please enter a value'}); - seets the value and title property
+
+Removing Attribute:
+
+$("img").removeAttr("alt") - removes all the alt attribute from image element
+
+Changing Class Name:
+
+We can add class names to elements
+
+.addClass(names) - Names is a class name or collection of class names seperated by space
+.removeClass(names) - Removes the class names
+.toggleClass(name) - Adds/removes the class name.
+function swap(){$("tr").toggleClass("Stripped");} - makes the table rows stripped while hovering over it.
+
+<table onmouseover ="swap();" onmouseout="swap();">
+
+changing CSS style:
+
+Css to an element can be applied in two ways one using class name and other using style attribute
+
+In jquery if you have selected an element we can change the css using .css(name,value) - sets the name property with the value. value can be string or numeric or function.
+
+If a funcion is passed as this parameter, it will be invoked for each element of the wrapped set with its return value serving as the value for the css property.
+
+$("div.expandable").css("width",function(){return $(this).width() + 20 +"px";})' - this function call increases the current width of the div by 2o pixels.
+
+.css(properties) sets the css properties specified as keys in the passed object to their associated values for all matched elements
+
+.css(name) will give value of the property
+
+
+Changing Element Content:
+
+change the inner html of elements 
+
+.html(() - Gets the current innerHTML value
+.html(text) - Sets the innerHTML
+.text() - Gets only the text part of innerHTML, say if you have div and 4 paragraph within it, you will get tags and text, whereas text will give only text
+.text(text) - will appear as they are specified, if tags are found < and> will be replaced as &lt;
+.append(content) - appends the content
+.appendTo(target) - appends the cureent wrapped set to target
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
